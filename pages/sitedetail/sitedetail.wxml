@@ -1,0 +1,9 @@
+<!--pages/sitedetail/sitedetail.wxml-->
+<view>
+<image src="{{site.site_picURL}}"></image>
+<view class="site_info">
+    <lable>{{site.site_name}}</lable>
+    <i-icon type="coordinates_fill" size="30" color="blue" bindtap="startNavigation"></i-icon>
+</view>
+<scroll-view class="desc_box">{{site.site_desc}}</scroll-view>
+</view>

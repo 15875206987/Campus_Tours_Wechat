@@ -1,0 +1,20 @@
+<view>
+<i-drawer mode="left" visible="{{showDrawer}}" bind:close="toggleLeft" class="drawer">
+    <scroll-view class="demo-container" scroll-y="true">
+        <view wx:for="{{departmentList}}" class="list" data-index="{{index}}" bindtap="change">
+         {{item.school_name}}
+        </view>
+    </scroll-view>
+</i-drawer>
+<view bindtap="toggleLeft" class="change_button">{{selected.school_name}}</view>
+<i-collapse name="{{name}}" accordion>
+    <i-collapse-item wx:for="{{majorList}}" title="{{item.major_name}}" name="{{item.major_id}}">
+        <view slot="content">
+        <image src="{{item.major_picURL}}"></image>
+        <view>{{item.major_desc}}</view>
+        </view>
+    </i-collapse-item>
+</i-collapse>
+</view>
+
+

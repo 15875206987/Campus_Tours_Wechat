@@ -1,0 +1,23 @@
+<!--pages/search/search.wxml-->
+<view>
+<view class="searchlayout">
+<input mode="wrapped" placeholder="请输入景点名称关键字" value="{{keyword}}" style="margin-left:20px" focus="true" bindinput="bindKeyInput"/>
+<i-icon type="search" size="30" color="green" bindtap="search"/>
+</view>
+<scroll-view class="{{info_box}}" scroll-y="true">
+  <view wx:for="{{selectPoint}}" key="{{item.site_id}}" class="site_box" bindtap="siteDetail" data-index="{{index}}">
+  <view class="site_info">
+    <image src="{{item.site_picURL}}" class="site_picture"></image>
+    <label>{{item.site_name}}</label>
+  </view>
+    <i-icon type="coordinates_fill" size="30" color="blue" bindtap="startNavigation" data-index="{{index}}"></i-icon>
+  </view>
+</scroll-view>
+<scroll-view class="{{info_box}}" scroll-y="true">
+<i-cell-group>
+<i-cell wx:for="{{poiPoints}}" key="{{item.id}}"title="{{item.title}}" label="{{item.address}}" >
+    <i-icon type="coordinates_fill" size="30" color="blue" bindtap="startNavigationPOI" data-index="{{index}}" slot="footer"></i-icon>
+</i-cell>
+</i-cell-group>
+</scroll-view>
+</view>

@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="root">
+  <image class='background-image' src='background.jpg' mode="aspectFill"></image>
+  <view class="content">
+    <scroll-view scroll-y="{{isScroll}}">
+    <view class="layout">
+        <view class='nav-list'>
+    <!-- 单个导航栏 url填跳转的pages -->
+        <navigator open-type="navigate" hover-class='none' url="/pages/{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+          <view class="nav-title">{{item.title}}</view>
+          <view class="nav-name">{{item.name}}</view>
+          <text class='cuIcon-{{item.icon}}'></text>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+

@@ -1,0 +1,26 @@
+<scroll-view scroll-y="{{isScroll}}" class="scroll_parent">
+<!-- 标签栏 -->
+<i-tabs current="{{ current_scroll }}" scroll bindchange="handleChangeScroll">
+    <i-tab wx:for="{{categories}}" key="{{item.category_id}}" title="{{item.category_name}}"></i-tab>
+</i-tabs>
+<!-- 地图 -->
+<view class="{{map_container}}"> 
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" show-location="true" markers="{{markers}}" include-points="{{markers}}" bindmarkertap="makertap">
+      <cover-view class="button-group">
+        <i-icon type="coordinates" size="30" color="red" bindtap="getCurrentLocation"/> 
+        <i-icon type="search" size="28" color="red" bindtap="search" />                         
+      </cover-view>
+  </map> 
+</view>
+<!-- 地点信息 -->
+<view bindtap="openInfoBox" class="info_box_button">共有{{markers.length}}个景点</view>
+<scroll-view class="{{info_box}}" scroll-y="true">
+  <view wx:for="{{markers}}" key="{{item.site_id}}" class="site_box" bindtap="siteDetail" data-index="{{index}}">
+  <view class="site_info">
+    <image src="{{item.site_picURL}}" class="site_picture"></image>
+    <label>{{item.site_name}}</label>
+  </view>
+    <i-icon type="coordinates_fill" size="30" color="blue" bindtap="startNavigation" data-index="{{index}}"></i-icon>
+  </view>
+</scroll-view>
+</scroll-view>

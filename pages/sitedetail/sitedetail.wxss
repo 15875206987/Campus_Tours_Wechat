@@ -1,0 +1,25 @@
+/* pages/sitedetail/sitedetail.wxss */
+page{
+  height: 100%;
+}
+image{
+  height: 250px;
+  margin: 0px;
+}
+.site_info{
+  margin: 0px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  color: rgb(25, 135, 207);
+  background: white;
+}
+
+.desc_box{
+ padding: 10px;
+ color: gray;
+ /* background: rgba(216, 208, 208, 0.137);
+ height: 200px; */
+}

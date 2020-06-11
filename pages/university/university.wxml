@@ -1,0 +1,8 @@
+<!--pages/University/university.wxml-->
+<view>
+<image src="{{university.university_picURL}}"></image>
+<view class="site_info">
+    <lable>{{university.university_name}}</lable>
+</view>
+<scroll-view class="desc_box">{{university.university_desc}}</scroll-view>
+</view>

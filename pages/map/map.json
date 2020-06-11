@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+        "i-tabs": "../../iViewUI/tabs/index",
+        "i-tab": "../../iViewUI/tab/index",
+        "i-icon": "../../iViewUI/icon/index"
+  }
+}

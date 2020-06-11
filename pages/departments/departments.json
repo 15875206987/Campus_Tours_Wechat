@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "i-drawer": "../../iViewUI/drawer/index",
+      "i-collapse": "../../iViewUI/collapse/index",
+      "i-collapse-item": "../../iViewUI/collapse-item/index"
+  }
+}
